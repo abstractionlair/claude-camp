@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Camp specific
+/active/solution.py
+/active/session_notes.md
+/active/session_brief.md
+/completed/*/solution.py
+
+# Keep templates
+!/active/.gitkeep
+!/completed/.gitkeep
