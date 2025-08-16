@@ -23,6 +23,7 @@ Claude Camp is a technical interview preparation system for experienced develope
     current_problem.py      # Problem Claude Code generates
     solution.py            # User's solution
     session_notes.md       # Claude Code's observations
+    session_brief.md       # Instructions from Chat Claude
   /reference/
     patterns.md            # Pattern reference (maintained by Chat Claude)
     stdlib_reference.py    # Personal stdlib cheatsheet
@@ -30,6 +31,24 @@ Claude Camp is a technical interview preparation system for experienced develope
   /completed/
     [timestamp]_[pattern]/ # Archived problems with solutions
 ```
+
+## Git Workflow Rules
+
+### Your Workspace
+- The `/active/` directory is your workspace - overwrite files freely
+- All files in `/active/` are gitignored and temporary
+- Never commit `/active/` contents to Git
+
+### Git Operations
+- **Never make Git commits unless explicitly asked by the user**
+- You have Git access but should only use it when specifically requested
+- If the user wants to save a solution, copy it to `/completed/` with a descriptive name
+- The user will decide what gets committed to the repository
+
+### File Permanence
+- `/active/` = Temporary workspace (never committed)
+- `/reference/` = Reference materials (only committed by user)
+- `/completed/` = Saved solutions (user decides what to preserve)
 
 ## Communication Protocol
 
