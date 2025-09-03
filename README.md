@@ -1,32 +1,23 @@
-# Claude Camp 🏕️
+# Claude Camp
 
-> AI-powered technical interview preparation using Claude as an adaptive teaching assistant
+Technical interview preparation using Claude as an adaptive teaching assistant
 
-## What is Claude Camp?
+## Details
 
-Claude Camp is a novel approach to technical interview preparation that uses Claude AI across two interfaces to create a personalized, adaptive learning experience. Instead of grinding random LeetCode problems, Claude Camp:
+We use Claude Opus via the (desktop) chat interface to manage the overall process.
+It knows the overall scope of what one should know for LeetCode-style interviews, tracks progress, and decides what needs practicing next. 
+It communicates with Claude Code, running Sonnet, via the filesystem connector.
+Sonnet in Claude Code writes problems in acord with the lesson plan from Opus, tracks student timing, runs and critiques the solutions, can give advice or hints, and reports overall session results back to Opus, also via the filesystem.
 
-- **Tracks your progress** across sessions
-- **Identifies your weak spots** and targets them
-- **Generates problems** tailored to your skill level
-- **Provides Socratic guidance** rather than just solutions
-- **Builds lasting pattern recognition** and stdlib fluency
+## Observations
+I'm quite happy with this.
+I think it is more efficient than me choosing problems myself and better than following someone else prep guide I could have grabbed on the internet because of the adaptivity.
+This does stretch the limits of Sonnet sllightly.
+Every now and then one of the answers that it puts into the tests is incorrect, but it realizes it when I ask it to check.
+Once a problem had a really ill-motivated, sort of "just tacked on" constraint which was awkward.
 
-## The Two-Claude Architecture
-
-### 1. Chat Claude (Mission Control)
-Uses Claude Projects to maintain awareness of:
-- Your pattern knowledge and progress
-- Common mistakes and weak areas
-- Personal stdlib reference
-- Overall learning trajectory
-
-### 2. Claude Code (Hands-on Trainer)
-Provides:
-- Problem generation and variation
-- Real-time code testing
-- Solution analysis and optimization tips
-- Implementation feedback
+This might be better done in a pure Claude Code way, but I liked the separation of the big picture from the details. And this structure gave me an easy way to manage costs.
+I use Opus via my regular subscription through the desktop app, and Claude Code with my API key plus Sonnet for the lower price.
 
 ## Quick Start
 
